@@ -321,9 +321,22 @@ section { min-height: 100vh; padding: 120px 8%; display: flex; flex-direction: c
   font-display: swap;
 }
 
-body.access-dyslexia *:not(i):not([class*="icon"]):not([class*="fa"]):not([class*="bi"]) {
-  font-family: 'OpenDyslexic', sans-serif !important;
-}
+body.access-dyslexia { font-family: 'OpenDyslexic', sans-serif !important; }
+body.access-dyslexia h1,
+body.access-dyslexia h2,
+body.access-dyslexia h3,
+body.access-dyslexia h4,
+body.access-dyslexia h5,
+body.access-dyslexia h6,
+body.access-dyslexia p,
+body.access-dyslexia li,
+body.access-dyslexia a:not([class*="fa"]):not([class*="icon"]),
+body.access-dyslexia span:not([class*="fa"]):not([class*="icon"]):not([class*="spo-cursor"]),
+body.access-dyslexia button:not([class*="fa"]):not([class*="icon"]),
+body.access-dyslexia label,
+body.access-dyslexia div:not([class*="fa"]):not([class*="icon"]),
+body.access-dyslexia ul { font-family: 'OpenDyslexic', sans-serif !important; }
+body.access-dyslexia i { font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands' !important; }
 
 /* --- B. TEXTO GRANDE (SOLO ESCRITORIO) --- */
 @media (min-width: 1151px) {
