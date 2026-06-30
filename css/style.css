@@ -313,8 +313,16 @@ section { min-height: 100vh; padding: 120px 8%; display: flex; flex-direction: c
 
 
 /* --- A. DISLEXIA (APLICA A TODO EXCEPTO A FUENTES DE ICONOS) --- */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body.access-dyslexia *:not(i):not([class*="icon"]):not([class*="fa"]):not([class*="bi"]) {
-  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif !important;
+  font-family: 'OpenDyslexic', sans-serif !important;
 }
 
 /* --- B. TEXTO GRANDE (SOLO ESCRITORIO) --- */
