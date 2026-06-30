@@ -270,33 +270,51 @@ const spoPhrases = translations[currentLang];
     });
   });
 
-
-  /* ==================
-     SIDEBAR NAV ACTIVO
+/* ==================
+     SIDEBAR NAV ACTIVO (Corregido y Optimizado)
      ================== */
 
-  const contentSections = gsap.utils.toArray("section");
-  const navItems        = gsap.utils.toArray(".nav-item");
+  const navItems = gsap.utils.toArray(".nav-item");
+
+  // Obtenemos dinámicamente los elementos de destino usando los 'href' del propio menú
+  const contentSections = navItems
+    .map(item => {
+      const href = item.getAttribute("href");
+      return href && href.startsWith("#") ? document.querySelector(href) : null;
+    })
+    .filter(el => el !== null); // Filtra elementos inexistentes o enlaces externos
 
   window.addEventListener("scroll", () => {
     let activeId = "";
+    const scrollPosition = window.scrollY;
 
-    contentSections.forEach((section) => {
-      const top    = section.offsetTop;
-      const height = section.clientHeight;
-      if (window.scrollY >= top - height / 3) {
-        activeId = section.getAttribute("id");
+    // 1. Caso Borde: Si está muy cerca del top, forzamos que el primer elemento (Inicio) esté activo
+    if (scrollPosition < 100) {
+      const firstHref = navItems[0]?.getAttribute("href");
+      if (firstHref && firstHref.startsWith("#")) {
+        activeId = firstHref.replace("#", "");
       }
-    });
+    } else {
+      // 2. Comportamiento por scroll para el resto de la página
+      contentSections.forEach((section) => {
+        const top    = section.offsetTop;
+        // Un margen fijo (ej. 150px) suele ser más fiable y orgánico que 'height / 3'
+        if (scrollPosition >= top - 150) {
+          activeId = section.getAttribute("id");
+        }
+      });
+    }
 
+    // 3. Asignación de la clase active (evitando conflictos con strings vacíos)
     navItems.forEach((item) => {
       item.classList.remove("active");
-      if (item.getAttribute("href").includes(activeId)) {
+      const href = item.getAttribute("href");
+      
+      if (activeId && href && href.includes(activeId)) {
         item.classList.add("active");
       }
     });
   }, { passive: true });
-
 
   /* ==================
      SNAP VERTICAL IMÁGENES (solo escritorio)
