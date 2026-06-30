@@ -70,6 +70,42 @@ body.access-contrast {
   border: 2px solid #fff;
 }
 
+body.access-contrast .download-cv-btn,
+body.access-contrast .load-more-btn,
+body.access-contrast .learn-more-btn,
+body.access-contrast .live-link-anchor,
+body.access-contrast .nav-menu a:hover,
+body.access-contrast .nav-menu a.active,
+body.access-contrast .widget-btn:hover,
+body.access-contrast .acc-dropdown button:hover,
+body.access-contrast .floating-booking-btn,
+body.access-contrast .floating-work-btn,
+body.access-contrast .floating-booking-btn:hover,
+body.access-contrast .floating-work-btn:hover {
+  color: #000000 !important;
+}
+
+body.access-contrast .cta-banner-section {
+  background: #ffff00 !important;
+}
+
+body.access-contrast .cta-title,
+body.access-contrast .cta-text,
+body.access-contrast .cta-subtitle {
+  color: #000000 !important;
+}
+
+body.access-contrast .cta-btn {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #000000 !important;
+}
+
+body.access-contrast .cta-btn:hover {
+  background-color: #111111 !important;
+  color: #ffff00 !important;
+}
+
 body.access-text-lg {
   font-size: 20px !important;
 }
@@ -286,7 +322,7 @@ body.access-dyslexia {
   position: fixed;
   top: 25px;
   right: 30px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   color: var(--accent-color) !important;
   text-decoration: none;
   padding: 12px 24px;
@@ -312,7 +348,7 @@ body.access-dyslexia {
   position: fixed;
   top: 75px;
   right: 30px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   color: var(--accent-color) !important;
   text-decoration: none;
   padding: 12px 24px;
@@ -596,9 +632,9 @@ html {
   line-height: 1.15;
   color: var(--text-main);
   white-space: nowrap;
-  background-color: rgba(255, 255, 255, 0.9); 
-  box-shadow: 0 0 25px 30px rgba(255, 255, 255, 0.9); 
-  border-radius: 8px; 
+  background-color: var(--bg-color);
+  box-shadow: 0 0 25px 30px var(--bg-color);
+  border-radius: 8px;
 }
 
 .spo-text em {
@@ -1197,42 +1233,35 @@ html {
 /* ==================
    RECUADROS DE TECNOLOGÍAS Y SOFT SKILLS
    ================== */
-.stack-box-left, 
+.stack-box-left,
 .stack-box-right {
-  /* Fondo azul muy clarito (puedes ajustar el color hexadecimal si lo quieres más/menos azul) */
-  background-color: #f0f7ff; 
-  /* Sombra suave con un ligero tono azulado para armonizar */
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08); 
-  /* Bordes redondeados suaves */
-  border-radius: 20px; 
-  /* Espacio interior para que el contenido respire y no se pegue al borde */
-  padding: 40px; 
-  
-  /* Aseguramos que ocupe todo el alto disponible si una caja tiene más contenido que la otra */
+  background-color: var(--card-bg-subtle);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid var(--badge-bg);
   display: flex;
   flex-direction: column;
 }
 
-/* Opcional: Centrar los títulos dentro de estas cajas nuevas */
 .stack-box-left h4,
 .stack-box-right h4 {
   margin-bottom: 25px;
-  /* Si prefieres el título alineado a la izquierda, puedes borrar este text-align */
-  text-align: center; 
+  text-align: center;
 }
 
-/* Modificamos ligeramente el fondo de las píldoras (badges) para que destaquen sobre el nuevo fondo azul */
 .stack-box-left .badges-wrapper span,
 .stack-box-right .badges-wrapper span {
-  background-color: #ffffff; /* Las píldoras ahora son blancas limpias */
-  border: 1px solid rgba(37, 99, 235, 0.15); /* Borde azul muy sutil */
+  background-color: var(--bg-color);
+  border: 1px solid var(--badge-bg);
+  color: var(--text-main);
 }
 /* ==================
    7. CV SOFT SKILLS
    ================== */
 
 .stack-box-right .badges-wrapper span {
-  background-color: var(--sidebar-bg);
+  background-color: var(--bg-color);
   color: var(--text-main);
   border: 1px solid var(--badge-bg);
   padding: 8px 16px;
@@ -1273,13 +1302,14 @@ html {
 /* ==================
    CTA BANNER FINAL 
    ================== */
+   
 .cta-banner-section {
   width: 100%;
-  min-height: 25vh; 
-  box-sizing: border-box; 
-  padding: 20px; 
+  min-height: 25vh;
+  box-sizing: border-box;
+  padding: 20px;
   margin-bottom: 0;
-  background-color: var(--accent-color, #2563eb); 
+  background: linear-gradient(135deg, #1a2744 0%, #1e3a5f 50%, #162035 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1297,15 +1327,14 @@ html {
 
 .cta-subtitle {
   font-family: var(--font-mono, monospace);
-  color: rgba(255, 255, 255, 0.7); 
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 700;
   font-size: 1.05rem;
 }
 
 .cta-title {
-  /* Reducimos un poco el tamaño para que encaje mejor en el 25vh */
-  font-size: 2rem; 
-  color: #ffffff; 
+  font-size: 2rem;
+  color: #ffffff;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -1314,7 +1343,7 @@ html {
 
 .cta-text {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.9); 
+  color: rgba(255, 255, 255, 0.88);
   margin: 0 0 10px 0;
 }
 
@@ -1336,21 +1365,22 @@ html {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #ffffff;
-  color: var(--accent-color, #2563eb);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.45);
   padding: 14px 36px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .cta-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-
 
 
 /* ==================
@@ -1698,5 +1728,100 @@ html {
     bottom: 12px;
     right: 12px;
     gap: 8px;
+  }
+}
+
+/* ==================
+   CTA BANNER FINAL (MODO CLARO)
+   ================== */
+[data-theme="light"] .cta-banner-section {
+  /* Sobrescribe el linear-gradient del modo oscuro */
+  background: var(--accent-color); 
+}
+
+[data-theme="light"] .cta-subtitle {
+  color: rgba(255, 255, 255, 0.7); 
+}
+
+[data-theme="light"] .cta-title {
+  color: #ffffff; 
+}
+
+[data-theme="light"] .cta-text {
+  color: rgba(255, 255, 255, 0.9); 
+}
+
+[data-theme="light"] .cta-btn {
+  background-color: #ffffff;
+  color: var(--accent-color);
+  border: 2px solid #ffffff; 
+}
+
+[data-theme="light"] .cta-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===================================================
+   OPTIMIZACIÓN HERO: CONTENEDOR CENTRADO / TEXTO A LA IZQUIERDA
+   =================================================== */
+
+/* Ajustes para Tablets y Móviles (coincidiendo con tu corte de 1150px) */
+@media (max-width: 1150px) {
+
+  /* 1. Forzamos a la sección a alinear a su hijo (.hero-center) al centro de la pantalla */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* Centra el bloque entero horizontalmente */
+    padding: 60px 5%;
+    min-height: auto;
+  }
+
+  /* 2. El truco maestro: el contenedor mide solo lo que ocupa el texto y se alinea a la izquierda */
+  .hero-center {
+    width: fit-content;       /* Se encoge para medir exactamente lo que mide tu frase más larga */
+    max-width: 100%;          /* Evita desbordamientos en pantallas pequeñas */
+    margin: 0 auto;           /* Asegura el centrado del bloque como elemento */
+    text-align: left;         /* Todo el texto interior se queda mirando a la izquierda */
+  }
+
+  /* 3. Aseguramos que las líneas internas arranquen desde el inicio */
+  .text-lines-group {
+    margin-bottom: 25px;
+  }
+
+  .hero-text-line {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;                /* Acortamos el espacio entre el número y el texto */
+    justify-content: flex-start; /* Contenido al inicio (izquierda) */
+    margin-bottom: 8px;
+  }
+
+  .hero-text-line h2 {
+    font-size: 2.4rem;        /* Mapeado con tu medida original para tablet */
+    text-align: left;
+  }
+
+  /* 4. Reseteamos el margen izquierdo que tenía el subtítulo en escritorio */
+  .hero-tagline {
+    font-size: 1.1rem;        /* Mapeado con tu medida original para tablet */
+    text-align: center;
+    margin-left: 0;           /* Alineado limpio con el símbolo '<' */
+    width: 100%;
+  }
+}
+
+/* Ajustes finos para pantallas de móviles (max 600px) */
+@media (max-width: 600px) {
+  .hero-text-line h2 {
+    font-size: 1.8rem;        /* Tu medida original para móvil */
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;       /* Tu medida original para móvil */
   }
 }
