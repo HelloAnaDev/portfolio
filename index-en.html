@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ana Nevado de Oyarbide — Junior Frontend Developer specializing in UI design and WordPress. Professional Portfolio.">
+  <title>Ana Nevado de Oyarbide | Frontend & WordPress Portfolio</title>
+  <link rel="icon" href="./images/favicon.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <div class="top-widgets">
+    <div class="accessibility-menu">
+      <button class="widget-btn" id="acc-toggle" title="Accessibility Options">
+        <i class="fa-solid fa-universal-access"></i>
+      </button>
+      <div class="acc-dropdown" id="acc-dropdown">
+        <button id="acc-contrast"><i class="fa-solid fa-circle-half-stroke"></i> High Contrast</button>
+        <button id="acc-text-lg"><i class="fa-solid fa-text-height"></i> Large Text</button>
+        <button id="acc-dyslexia"><i class="fa-solid fa-font"></i> Dyslexia Font</button>
+        <button id="acc-reset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      </div>
+    </div>
+    <button class="widget-btn" id="theme-toggle" title="Toggle Light/Dark Mode">
+      <i class="fa-solid fa-lightbulb"></i>
+    </button>
+  </div>
+
+  <aside class="sidebar">
+    <div class="brand-avatar">
+      <img src="images/perfil/Ana-Nevado-profile.webp" alt="Ana Nevado Profile">
+    </div>
+    
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#projects" class="nav-item"><i class="fa-solid fa-cubes"></i> Projects</a></li>
+        <li><a href="#about-footer" class="nav-item"><i class="fa-solid fa-user"></i> About me</a></li>
+      </ul>
+    </nav>
+    
+    <div class="sidebar-bottom">
+
+        <div class="cv-dropdown-wrapper">
+  <button class="download-cv-btn" id="cv-dropdown-btn">
+    <i class="fa-solid fa-file-pdf"></i> Download Resume <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 4px; "></i>
+  </button>
+  <div class="cv-dropdown-menu" id="cv-dropdown-menu">
+    <a href="Ana_Nevado_Developer.pdf" download target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> English</a>
+    <a href="Ana_Nevado_CV_Desarrolladora_Web.pdf" download target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Spanish</a>
+  </div>
+</div>
+
+      <div class="lang-selector">
+        <a href="index.html"><span>ES</span></a> / <span class="active">EN</span>
+      </div>
+      
+      <div class="sidebar-socials">
+        <a href="https://www.linkedin.com/in/helloanadev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/HelloAnaDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+      
+      
+    </div>
+  </aside>
+
+  <a href="mailto:hello.ana.dev@gmail.com" class="floating-work-btn">
+    <i class="fa-solid fa-envelope"></i> Get in touch
+  </a>
+  <a href="https://calendar.app.google/4KNFDP24h4bwmmeD8" target="_blank" rel="noopener noreferrer" class="floating-booking-btn">
+    <i class="fa-solid fa-calendar-days"></i> Book a meeting now
+  </a>
+  <div class="sticky-phrase-overlay" id="sticky-phrase-overlay">
+  <div class="spo-line">
+    <span class="spo-num" id="spo-num-1">01</span>
+    <span class="spo-text" id="spo-text-1"></span>
+    <span class="spo-cursor" id="spo-cursor-1">|</span>
+  </div>
+</div>
+
+  <main class="main-content">
+
+    <section id="hero" class="hero-section">
+  <div class="hero-center">
+    <div class="text-lines-group">
+      <div class="hero-text-line">
+        <span class="ln-num">01</span>
+        <h2>&lt;Hi, I'm <span>Ana</span>!&gt;</h2>
+      </div>
+      <div class="hero-text-line">
+        <span class="ln-num">02</span>
+        <h2>&lt;<span>UI</span> Design&gt;</h2>
+      </div>
+      <div class="hero-text-line">
+        <span class="ln-num">03</span>
+        <h2>&lt;and <span>Frontend</span> dev&gt;</h2>
+      </div>
+    </div>
+    <h3 class="hero-tagline">Junior Web Developer · Frontend & WordPress</h3>
+    
+    <a href="#projects" class="learn-more-btn">
+      <span>View projects</span>
+      <div class="arrow-down-container"><i class="fa-solid fa-arrow-down"></i></div>
+    </a>
+  </div>
+</section>
+
+      
+    <section id="projects" class="projects-section">
+      <div class="projects-header-title">
+        <h2>My projects</h2>
+      </div>
+
+      <div class="project-split-wrapper">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">Custom Code</div>
+            <h3>Casa de las Mujeres Vallekas</h3>
+            <h4 class="proj-desc">End-to-end web platform developed for the <i>Casa de las Mujeres Vallekas</i> association, from requirements gathering to production deployment. Custom code: HTML5, CSS3, and JavaScript.</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Create a real digital presence for an association lacking technical resources, aimed at non-digital-native users who needed to manage the site autonomously.</li> 
+              
+              <li><strong>Result: </strong>Live website, fully self-managed by the users since launch. Verified Google Lighthouse metrics: 100/100 in Best Practices and SEO, 88/100 in Accessibility.</li>
+            </ul>
+            <div class="project-action-links">
+              <a href="http://www.casadelasmujeresvallekas.es" target="_blank" rel="noopener noreferrer" class="live-link-anchor"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit live site</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/casa/dispositivos-publico.webp" alt="Casa de las Mujeres Mockup 1">
+          </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/casa/dispositivos-privado.webp" alt="Casa de las Mujeres Mockup 2">
+            </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/casa/SCROLL.webp" alt="Casa de las Mujeres Mockup 3">
+          </div>
+        </div>  
+      </div>
+
+      <div class="project-split-wrapper row-inverted">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">WordPress (Elementor)</div>
+            <h3>Fundación Venancio Salcines</h3>
+            <h4 class="proj-desc">Complete redesign of the Foundation's digital presence, based on the client's own graphic design. The work consisted of faithfully translating their visual proposal into a functional website. Developed in WordPress with Elementor during my internship at WeJustDesign.</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Respect 100% of the visual identity defined by the client and bring it to life on a real website.</li>
+              <li><strong>Result: </strong>A website faithful to the client's original design and fully validated by the foundation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/fundacion/mockup1.webp" alt="Fundación Venancio Mockup 1">
+          </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/fundacion/mockup2.webp" alt="Fundación Venancio Mockup 2">
+            </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/fundacion/mockup3.webp" alt="Fundación Venancio Mockup 3">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-split-wrapper">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">WordPress (Elementor)</div>
+            <h3>Tesela Psychology Clinic</h3>
+            <h4 class="proj-desc">Corporate website for a psychology clinic, focused on conveying trust from the very first interaction. Developed in WordPress with Elementor during my internship at WeJustDesign.</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Design a digital experience that conveys calm and safety to people seeking psychological help.</li>
+              <li><strong>Result: </strong>A website that brings the warmth of the clinic's physical space into the digital environment, maintaining its corporate identity and making it easier to attract new patients.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/tesela/mockup1.webp" alt="Clínica Tesela Mockup 1">
+          </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/tesela/mockup2.webp" alt="Clínica Tesela Mockup 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="load-more-wrapper">
+        <button class="load-more-btn" id="load-more-btn">
+          <i class="fa-solid fa-plus"></i> View more projects
+        </button>
+      </div>
+
+      <div class="project-split-wrapper row-inverted hidden-project">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">Custom Code</div>
+            <h3>DAW Vocational Training Test Web App</h3>
+            <h4 class="proj-desc">Exam practice web app for 2nd-year DAW students, designed with a <i>mobile-first</i> approach. Built with HTML5, CSS3, and JavaScript.</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Create a tool that students would voluntarily want to use, making exam practice less tedious.</li>
+              <li><strong>Result: </strong>An app featuring multiple test modes, error history, grade saving, and a reward system. Clean design focused on concentration, fully optimized for mobile devices.</li>
+            </ul>
+            <div class="project-action-links">
+              <a href="https://test22daw.netlify.app/" target="_blank" rel="noopener noreferrer" class="live-link-anchor"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit live site</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/test/mockup1.webp" alt="Test DAW Mockup 1">
+          </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/test/mockup2.webp" alt="Test DAW Mockup 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-split-wrapper hidden-project">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">Custom Code</div>
+            <h3>Mima tu cuerpo</h3>
+            <h4 class="proj-desc">Informational website for coaching services. A real-world project, small in scope but built to be fast, clean, and dependency-free. Built with custom code (HTML5 and CSS3).</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Communicate services clearly and without visual noise, prioritizing content over form.</li>
+              <li><strong>Result: </strong>A static, maintenance-free website with instant loading times and straightforward navigation geared towards conversion.</li>
+            </ul>
+            <div class="project-action-links">
+              <a href="https://mimatucuerpo.pages.dev/" target="_blank" rel="noopener noreferrer" class="live-link-anchor"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit live site</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/mima/mockup1.webp" alt="Mima tu cuerpo Mockup 1">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-split-wrapper row-inverted hidden-project">
+        <div class="proj-info-sticky">
+          <div class="project-text-card">
+            <div class="tag-badge">WordPress (Elementor)</div>
+            <h3>E3 Language Solutions</h3>
+            <h4 class="proj-desc">Corporate website for a language training company offering services to both businesses and individuals. Developed in WordPress with Elementor during my internship at WeJustDesign.</h4>
+            <ul class="proj-desc">
+              <li><strong>Objective: </strong>Organize a dual service offering (B2B and B2C) so that each user profile could find what they were looking for without friction.</li>
+              <li><strong>Result: </strong>A visually appealing and agile platform that clearly outlines its different services and makes getting in touch easy.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-visuals-track">
+          <div class="visual-panel">
+            <img src="images/proyectos/e3/mockup1.webp" alt="E3 Solutions Mockup 1">
+          </div>
+          <div class="visual-panel">
+            <img src="images/proyectos/e3/mockup2.webp" alt="E3 Solutions Mockup 2">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="about-footer" class="about-footer-section">
+  <div class="cv-horizontal-container">
+
+    <div class="bio-academic-row">
+      <div class="bio-col">
+        <h2 class="cv-name-title">ANA NEVADO DE OYARBIDE</h2>
+        <h3 class="cv-subtitle-label">Web Developer · Frontend, WordPress & Applied AI</h3>
+
+        <div class="contact-pill-box">
+          <p><i class="fa-solid fa-phone"></i> +34 676 533 739</p>
+          <p><i class="fa-solid fa-envelope"></i> hello.ana.dev@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Madrid (Villanueva del Pardillo) | Own vehicle</p>
+          <p><i class="fa-solid fa-laptop-house"></i> Remote (Preferred) / Hybrid / On-site</p>
+        </div>
+      </div>
+
+      <div class="academic-col">
+        <div class="academic-block-cv">
+          <h4><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+          
+          <div class="edu-item">
+            <span class="edu-date">2024 – 2026</span>
+            <p><strong>Advanced Vocational Degree in Web App Development (DAW)</strong> - IES José Martínez / EPSUM</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-date">2023</span>
+            <p><strong>Master's Degree in Gender Equality</strong> - SIAC - Higher Institute for Social Intervention and Action</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-date">2019 – 2021</span>
+            <p><strong>Advanced Vocational Degree in Social Integration</strong> - IES Renacimiento</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-date">2014 – 2018</span>
+            <p><strong>Bachelor's Degree in Primary Education</strong> (Specialization in Special Education) - ESCUNI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trayectoria-row">
+      <h4 class="section-main-title"><i class="fa-solid fa-briefcase"></i> Professional Experience</h4>
+      
+      <div class="jobs-grid">
+        <div class="job-timeline-card">
+          <h5>WordPress Web Developer (Internship)</h5>
+          <span class="job-meta">WeJustDesign (Agency) | April 2026 – June 2026</span>
+          <ul>
+            <li>Technical maintenance of corporate websites in production, ensuring stability and optimal loading times.</li>
+            <li>Layout and responsive design adjustments with WordPress and Elementor, including custom CSS in containers.</li>
+            <li>On-page SEO optimization using Yoast.</li>
+          </ul>
+        </div>
+
+        <div class="job-timeline-card">
+          <h5>Web Developer & ICT Trainer</h5>
+          <span class="job-meta">Casa de las Mujeres de Vallekas | 2021 – 2026</span>
+          <ul>
+            <li>Full development of the web platform: requirements gathering, design, development, and production deployment.</li>
+            <li>Training and creation of tailored manuals for non-technical users, achieving complete self-management of the site.</li>
+          </ul>
+        </div>
+
+        <div class="job-timeline-card">
+          <h5>Operational Incident Management & CRM</h5>
+          <span class="job-meta">Securitas Direct | 2025</span>
+          <ul>
+            <li>First-level operational support, quickly identifying and prioritizing client needs.</li>
+            <li>Triage and escalation of incidents to the appropriate departments.</li>
+          </ul>
+        </div>
+
+        <div class="job-timeline-card">
+          <h5>Social Integrator / Teacher</h5>
+          <span class="job-meta">Red Cross / Colisée Residence / Educational Centers | 2018 – 2025</span>
+          <ul>
+            <li>Handling high-tension situations with calm and sound judgment.</li>
+            <li>Managing complex cases: initial assessment, individualized tracking, and coordination with other professionals.</li>
+            <li>Planning curriculum and managing diverse groups, adapting the teaching approach to each student's profile.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-stack-cv-footer">
+      <div class="stack-box-left">
+        <h4>.Tech Stack &amp; Tools</h4>
+        <div class="badges-wrapper">
+          <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
+          <span><i class="fa-solid fa-cubes"></i> Elementor</span>
+          <span><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span><i class="fa-brands fa-js"></i> JavaScript (JS)</span>
+          <span><i class="fa-solid fa-database"></i> MySQL</span>
+          <span><i class="fa-solid fa-magnifying-glass"></i> Yoast / Woo</span>
+          <span><i class="fa-solid fa-gauge-high"></i> Lighthouse</span>
+          <span><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+        </div>
+      </div>
+      <div class="stack-box-right">
+        <h4>.Soft Skills</h4>
+        <div class="badges-wrapper">
+          <span><i class="fa-solid fa-heart"></i> Empathy & UX focus</span>
+          <span><i class="fa-solid fa-language"></i> Clear technical communication</span>
+          <span><i class="fa-solid fa-eye"></i> Accessibility & usability</span>
+          <span><i class="fa-solid fa-robot"></i> AI applied to development</span>
+          <span><i class="fa-solid fa-bolt"></i> Problem-solving under pressure</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <section class="cta-banner-section">
+  <div class="cta-content">
+    <span class="cta-subtitle">&lt; Next steps &gt;</span>
+    <h2 class="cta-title">Do you have a project in mind or are you looking to add someone to your team?</h2>
+    <p class="cta-text">I'm looking for my next professional opportunity—let's chat!</p>
+    
+    <div class="cta-btn-group">
+      <a href="mailto:hello.ana.dev@gmail.com" class="cta-btn">
+        <i class="fa-solid fa-envelope"></i> Get in touch
+      </a>
+      <a href="https://calendar.app.google/4KNFDP24h4bwmmeD8" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-booking">
+        <i class="fa-solid fa-calendar-days"></i> Book a meeting
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+      <footer class="sub-footer-rights">
+        <p>&copy; 2026 | Ana Nevado de Oyarbide | Portfolio</p><br>
+      </footer>
+      <div class="lightbox-overlay" id="lightbox-overlay">
+  <div class="lightbox-inner">
+    <button class="lightbox-btn" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <div style="position:relative;">
+      <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded view">
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+    <button class="lightbox-btn" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
